@@ -6,8 +6,8 @@
     <pd:startY>64</pd:startY>
     <pd:returnBindings/>
     <pd:endName>End</pd:endName>
-    <pd:endX>452</pd:endX>
-    <pd:endY>66</pd:endY>
+    <pd:endX>450</pd:endX>
+    <pd:endY>64</pd:endY>
     <pd:errorSchemas/>
     <pd:processVariables/>
     <pd:targetNamespace>http://xmlns.example.com/1701734388023</pd:targetNamespace>
