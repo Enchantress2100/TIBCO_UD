@@ -1,0 +1,35 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<Orders xmlns = "http://www.tibco.com/TIBCO_UD/Assignments/Schemas/Orders">
+	<Order xmlns = "http://www.tibco.com/TIBCO_UD/Assignments/Schemas/Order">
+		<CustomerID>GREAL</CustomerID>
+		<EmployeeID>5</EmployeeID>
+		<OrderDate>2022-01-01T16:55:00.848Z</OrderDate>
+		<RequiredDate>2022-01-01T16:55:00.848Z</RequiredDate>
+		<ShipInfo xmlns = "http://www.tibco.com/TIBCO_UD/Assignments/Schemas/ShipInfo">
+			<ShipVia>2</ShipVia>
+			<Freight>3.35</Freight>
+			<ShipName>Great Lakes Food Market</ShipName>
+			<ShipAddress>2732 Baker Blvd.</ShipAddress>
+			<ShipCity>Eugene</ShipCity>
+			<ShipRegion>OR</ShipRegion>
+			<ShipPostalCode>97403</ShipPostalCode>
+			<ShipCountry>USA</ShipCountry>
+		</ShipInfo>
+	</Order>
+	<Order xmlns = "http://www.tibco.com/TIBCO_UD/Assignments/Schemas/Order">
+		<CustomerID>GREAL</CustomerID>
+		<EmployeeID>6</EmployeeID>
+		<OrderDate>2022-01-01T16:55:00.848Z</OrderDate>
+		<RequiredDate>2022-01-01T16:55:00.848Z</RequiredDate>
+		<ShipInfo xmlns = "http://www.tibco.com/TIBCO_UD/Assignments/Schemas/ShipInfo">
+			<ShipVia>2</ShipVia>
+			<Freight>4.42</Freight>
+			<ShipName>Great Lakes Food Market</ShipName>
+			<ShipAddress>2732 Baker Blvd.</ShipAddress>
+			<ShipCity>Eugene</ShipCity>
+			<ShipRegion>OR</ShipRegion>
+			<ShipPostalCode>97403</ShipPostalCode>
+			<ShipCountry>USA</ShipCountry>
+		</ShipInfo>
+	</Order>
+</Orders>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	 xmlns:ShipInfo="http://www.tibco.com/Schemas/Assignments/Models/ShipInfo"
-	 targetNamespace="http://www.tibco.com/Schemas/Assignments/ShipInfo"
+	 xmlns:ShipInfo="http://www.tibco.com/TIBCO_UD/Assignments/Schemas/ShipInfo"
+	 targetNamespace="http://www.tibco.com/TIBCO_UD/Assignments/Schemas/ShipInfo"
 	 elementFormDefault="qualified"
 	 attributeFormDefault="unqualified">
 	<xs:element name="ShipInfo">
