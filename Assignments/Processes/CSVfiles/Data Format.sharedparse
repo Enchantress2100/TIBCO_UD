@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BWSharedResource xmlns:pfx="http://www.tibco.com/schemas/TIBCO_UD/filesModule5/Resources/Schemas/Models/Users" xmlns:pfx2="http://www.tibco.com/TIBCO_UD/Assignments/Schemas/Orders">
+    <import namespace="http://www.tibco.com/schemas/TIBCO_UD/filesModule5/Resources/Schemas/Models/Users" schemaLocation="/filesModule5/Resources/Schemas/Models/Users.xsd"/>
+    <import namespace="http://www.tibco.com/TIBCO_UD/Assignments/Schemas/Orders" schemaLocation="/Assignments/Schemas/Orders.xsd"/>
+    <name>Data Format</name>
+    <resourceType>ae.shared.ParseSharedResource</resourceType>
+    <config xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <FormatType>Delimiter separated</FormatType>
+        <ColumnSeparator>,</ColumnSeparator>
+        <ColSeparatorRule>Treat all characters as entered as a single column separator string</ColSeparatorRule>
+        <LineSeparator>
+</LineSeparator>
+        <FillCharacter>Space</FillCharacter>
+        <DataFormat ref="pfx2:Orders"/>
+    </config>
+</BWSharedResource>

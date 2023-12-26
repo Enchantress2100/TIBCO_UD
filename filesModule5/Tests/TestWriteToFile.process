@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pd:ProcessDefinition xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:pfx="http://www.tibco.com/schemas/TIBCO_UD/filesModule5/Resources/Schemas/Commons/Header.xsd" xmlns:pd="http://xmlns.tibco.com/bw/process/2003" xmlns:pfx2="http://www.tibco.com/schemas/TIBCO_UD/filesModule5/Resources/Schemas/Models/Context" xmlns:ns="http://www.tibco.com/schemas/TIBCO_UD/0.ProjectZero/Resources/Schemas/SharedProcesses/WriteToFileRequest.xsd" xmlns:pfx3="http://www.tibco.com/schemas/TIBCO_UD/filesModule5/Resources/Schemas/Services/WriteToFileResponse.xsd" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" xmlns:ns2="http://www.tibco.com/schemas/TIBCO_UD/0.ProjectZero/Resources/Schemas/Commons/Header.xsd" xmlns:ns1="http://www.tibco.com/schemas/TIBCO_UD/filesModule5/Resources/Schemas/Commons/Response" xmlns:ns4="http://www.tibco.com/schemas/TIBCO_UD/filesModule5/Resources/Schemas/Services/WriteToFileRequest.xsd" xmlns:ns3="http://www.tibco.com/schemas/TIBCO_UD/0.ProjectZero/Resources/Schemas/Models/Context">
+    <xs:import xmlns:xs="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco.com/schemas/TIBCO_UD/filesModule5/Resources/Schemas/Services/WriteToFileRequest.xsd" schemaLocation="/filesModule5/Resources/Schemas/Services/WriteToFileRequest.xsd"/>
+    <xs:import xmlns:xs="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco.com/schemas/TIBCO_UD/filesModule5/Resources/Schemas/Services/WriteToFileResponse.xsd" schemaLocation="/filesModule5/Resources/Schemas/Services/WriteToFileResponse.xsd"/>
+    <pd:name>filesModule5/Tests/TestWriteToFile.process</pd:name>
+    <pd:startName>Start</pd:startName>
+    <pd:startX>150</pd:startX>
+    <pd:startY>64</pd:startY>
+    <pd:returnBindings>
+        <pfx3:WriteToFileResponse>
+            <xsl:copy-of select="$WriteFile/pfx3:WriteToFileResponse/pfx:Header"/>
+            <pfx3:Body>
+                <xsl:copy-of select="$WriteFile/pfx3:WriteToFileResponse/pfx3:Body/ns1:Response"/>
+            </pfx3:Body>
+        </pfx3:WriteToFileResponse>
+    </pd:returnBindings>
+    <pd:endName>End</pd:endName>
+    <pd:endType ref="pfx3:WriteToFileResponse"/>
+    <pd:endX>451</pd:endX>
+    <pd:endY>63</pd:endY>
+    <pd:errorSchemas/>
+    <pd:processVariables/>
+    <pd:targetNamespace>http://xmlns.example.com/1701734388023</pd:targetNamespace>
+    <pd:activity name="WriteFile">
+        <pd:type>com.tibco.pe.core.CallProcessActivity</pd:type>
+        <pd:resourceType>ae.process.subprocess</pd:resourceType>
+        <pd:x>287</pd:x>
+        <pd:y>68</pd:y>
+        <config>
+            <processName>/filesModule5/Processes/SharedFolder/WriteFile.process</processName>
+        </config>
+        <pd:inputBindings>
+            <ns4:WriteToFileRequest>
+                <pfx:Header>
+                    <pfx2:Context>
+                        <pfx2:correlationId>
+                            <xsl:value-of select="'correlationID'"/>
+                        </pfx2:correlationId>
+                    </pfx2:Context>
+                    <pfx:timestamp>
+                        <xsl:value-of select="current-dateTime()"/>
+                    </pfx:timestamp>
+                </pfx:Header>
+                <ns4:Body>
+                    <ns4:sourcePath>
+                        <xsl:value-of select="'C:/Users/mgomezt/OneDrive - Deloitte (O365D)/Desktop/TIBCO_UD/Files/Input/'"/>
+                    </ns4:sourcePath>
+                    <ns4:sourceFileName>
+                        <xsl:value-of select="concat('file_', tib:format-dateTime('YYYYMMssHHmmss',current-dateTime()), 'txt')"/>
+                    </ns4:sourceFileName>
+                    <ns4:message>
+                        <xsl:value-of select="'1'"/>
+                    </ns4:message>
+                </ns4:Body>
+            </ns4:WriteToFileRequest>
+        </pd:inputBindings>
+    </pd:activity>
+    <pd:transition>
+        <pd:from>Start</pd:from>
+        <pd:to>WriteFile</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+    <pd:transition>
+        <pd:from>WriteFile</pd:from>
+        <pd:to>End</pd:to>
+        <pd:lineType>Default</pd:lineType>
+        <pd:lineColor>-16777216</pd:lineColor>
+        <pd:conditionType>always</pd:conditionType>
+    </pd:transition>
+</pd:ProcessDefinition>
