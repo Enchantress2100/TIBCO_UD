@@ -5,3 +5,5 @@ Solved Assignments:
 -XML Activities Palette
 -File Palette
 -JMS Palette
+-HTTP Palette
+-JDBC Palette
